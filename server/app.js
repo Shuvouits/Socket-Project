@@ -8,6 +8,7 @@ import fileUpload from "express-fileupload";
 import cors from "cors";
 import createHttpError from "http-errors";
 import winston from "winston";  //it helps to shows various log information
+import routes from './routes/index.js'
 
 // Destructure the `error` function from winston if needed
 const { error } = winston;
@@ -48,13 +49,10 @@ app.use(cors({
     origin: "http://localhost:3000",
 }));
 
-app.get('/', (req,res)=> {
-    res.send("hello from server")
-})
+//api v1 routes
+app.use("/api/v1", routes);
 
-app.post("/test", (req, res)=> {
-    throw createHttpError.BadRequest("this route has an error");
-})
+
 
 app.use(async(req, res, next)=> {
     next(createHttpError.NotFound("This route does not exist."));
