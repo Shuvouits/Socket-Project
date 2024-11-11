@@ -1,4 +1,4 @@
-import mongoose, { Collection } from "mongoose";
+import mongoose from "mongoose";
 import validator from "validator";
 
 const userSchema = mongoose.Schema({
@@ -34,8 +34,8 @@ const userSchema = mongoose.Schema({
 
 
 },  {
-    Collection: "users",
-    timestamps: "true",
+    collection: "users",
+    timestamps: true,
 });
 
 const UserModel = mongoose.models.UserModel || mongoose.model('UserModel', userSchema);
