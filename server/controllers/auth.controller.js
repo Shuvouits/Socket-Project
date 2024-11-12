@@ -9,7 +9,7 @@ export const register = async(req, res, next) => {
             name, email, picture, status, password
         });
 
-        res.send(req.body);
+        res.send(newUser);
 
     }catch(error){
         next (error)
