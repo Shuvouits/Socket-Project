@@ -3,6 +3,7 @@ import { useState } from "react";
 import SidebarHeader from './header/SidebarHeader'
 import Notification from './notifications/Notification'
 import { Search } from './search'
+import { Conversations } from "./conversations";
 
 export default function Sidebar() {
 
@@ -16,6 +17,9 @@ export default function Sidebar() {
      <Notification />
 
      <Search searchLength={searchResults.length} />
+
+      {/*Conversations*/}
+      <Conversations />
     
     </div>
   )
