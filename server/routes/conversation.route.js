@@ -1,7 +1,6 @@
 import express from "express";
 import trimRequest from "trim-request";
 import authMiddleware from "../middlewares/authMiddleware.js";
-import { create_open_conversation } from "../controllers/conversation.controller.js";
 
 import {
   create_open_conversation,

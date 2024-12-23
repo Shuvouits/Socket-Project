@@ -1,5 +1,5 @@
 import createHttpError from "http-errors";
-import logger from "../configs/logger.config.js";
+import logger from "../configs/logger.js";
 import {
     createConversation,
     doesConversationExist,
